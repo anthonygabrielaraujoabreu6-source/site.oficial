@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>TE VIVO</title>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #2b004f, #6a00a3);
+  color: white;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff2d75;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  color: pink;
+  animation: subir 5s linear infinite;
+}
+
+@keyframes subir {
+  0% { transform: translateY(0); opacity:1; }
+  100% { transform: translateY(-100vh); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+ <body>
+
+<!-- LOGIN -->
+<div id="login" style="
+  position:fixed;
+  width:100%;
+  height:100%;
+  background: linear-gradient(135deg, #2b004f, #6a00a3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+">
+
+  <div style="
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    backdrop-filter: blur(10px);
+  ">
+
+    <h2>Digite a senha</h2>
+
+    <input id="senha" type="password" placeholder="Senha"
+      style="padding:10px; border:none; border-radius:10px; margin-top:10px;">
+
+    <br><br>
+
+    <button onclick="entrar()" style="
+      padding:10px 20px;
+      border:none;
+      border-radius:10px;
+      background:#ff2d75;
+      color:white;
+      cursor:pointer;
+    ">
+      Entrar
+    </button>
+
+    <p id="erro" style="color:red; margin-top:10px;"></p>
+
+  </div>
+</div>
+<!-- MENU -->
+<nav>
+  <a href="#home">CASA</a>
+  <a href="#memorias">Memorias💞</a>
+  <a href="#mensage">leia prfv</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <h1>seja bem vinda❤️</h1>
+  <p>aqui contem minhas sinceras desculpas e algumas memorias nossa 💕</p>
+
+  <div style="display:flex; justify-content:center; gap:20px; margin-top:20px; flex-wrap:wrap;">
+    
+    <video width="250" controls>
+      <source src="https://files.catbox.moe/i8ebf7.mp4" type="video/mp4">
+    </video>
+
+    <video width="250" controls>
+      <source src="https://files.catbox.moe/ie1o30.mp4" type="video/mp4">
+    </video>
+
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section id="memorias">
+  <h1>Memorias</h1>
+
+  <div class="grid">
+    <img src="https://i.imgur.com/FSJTIAw.jpg" width="300">
+    <img src="https://i.imgur.com/pLvBQWa.jpg" width="300">
+    <img src="https://i.imgur.com/DAJtrBy.jpg" width="300">
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="mensage">
+  <h1>desculpa por tudo.</h1>
+
+  <div class="card">
+    <p>
+      te prometi nao te procurar mais..<br><br>
+      Eu criei esse site como uma forma de deixar registrado tudo aquilo que talvez eu nunca tenha conseguido te dizer direito.
+
+Eu sei que errei muito com você. Fui imaturo, não fui sincero quando deveria ter sido, e depois do término eu ainda tentei te esquecer me envolvendo com outra pessoa… e isso só piorou tudo. Hoje eu enxergo com clareza o quanto minhas atitudes te machucaram, e carrego essa culpa comigo todos os dias.
+
+Não estou aqui pra te pedir outra chance. Eu já aceitei que você seguiu seu caminho, e talvez nunca mais volte. Eu respeito isso. Mas mesmo assim, eu precisava que você soubesse de uma coisa: eu ainda te amo… e sinto a sua falta todos os dias.
+
+O meu passado não me representa mais. Eu mudei, ou pelo menos estou tentando mudar de verdade. Eu sei que pra você pode ser difícil acreditar nisso — e eu entendo completamente. Afinal, quem iria querer alguém com o histórico que eu tive? Eu não te culpo por nada.
+
+Mas, apesar de tudo, você foi uma das coisas mais bonitas que já aconteceram na minha vida. Você me fez sentir vivo de um jeito que eu nunca tinha sentido antes. Foi uma luz muito forte pra mim… e é por isso que tudo foi tão marcante.
+
+Eu sinto muito por ter sido o motivo de você decidir nunca mais me querer na sua vida. Essa é uma dor que eu vou carregar, mas também é o que me faz querer ser alguém melhor.
+
+Se algum dia você lembrar de mim, eu só espero que não seja apenas pelos erros… mas também por tudo que foi verdadeiro entre a gente.
+
+Te vivo… e vivo te esperando.
+    </p>
+  </div>
+</section>
+
+<button class="music-btn" onclick="toggleMusic()" id="btn">▶</button>
+
+<script>
+const audio = new Audio("music.mp3");
+
+const inicio = 60;
+const fim = 90;
+
+const btn = document.getElementById("btn");
+
+function toggleMusic() {
+  if (audio.paused) {
+    audio.currentTime = inicio;
+    audio.play();
+    btn.innerHTML = "⏸";
+  } else {
+    audio.pause();
+    btn.innerHTML = "▶";
+  }
+}
+
+audio.addEventListener("timeupdate", () => {
+  if (audio.currentTime >= fim) {
+    audio.pause();
+    audio.currentTime = inicio;
+    btn.innerHTML = "▶";
+  }
+});
+
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}, 1000);
+
+function entrar() {
+  const senha = document.getElementById("senha").value;
+
+  if (senha === "2107") {
+    document.getElementById("login").style.display = "none";
+  } else {
+    document.getElementById("erro").innerText = "Senha incorreta 💔";
+  }
+}
+</script>
+
+</html>
