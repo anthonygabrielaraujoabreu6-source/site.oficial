@@ -2,27 +2,25 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-<title>so vai saber se Entrar kskssk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TE VIVO</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   font-family: Arial;
   background: linear-gradient(135deg, #2b004f, #6a00a3);
   color: white;
   text-align: center;
+}
+
+/* CORREÇÃO MOBILE */
+html, body {
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -30,50 +28,42 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.4);
-  padding: 12px;
-  backdrop-filter: blur(10px);
-  z-index: 10;
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 14px;
 }
 
 section {
   min-height: 100vh;
-  padding: 90px 10px 40px;
+  padding-top: 80px;
 }
 
+/* GRID NOVO (VIDEOS + FOTOS) */
 .media-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
 }
 
 .media-grid img,
 .media-grid video {
   width: 100%;
-  height: 190px;
+  height: 220px;
   object-fit: cover;
   border-radius: 15px;
-  background: black;
-}
-
-.media-grid video:active {
-  transform: scale(0.98);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
 .grid img {
@@ -87,7 +77,6 @@ section {
   border-radius: 15px;
   max-width: 600px;
   margin: auto;
-  backdrop-filter: blur(10px);
 }
 
 .music-btn {
@@ -102,12 +91,12 @@ section {
   font-size: 20px;
   color: white;
   cursor: pointer;
-  box-shadow: 0 0 15px rgba(255,45,117,0.6);
 }
 
 .heart {
   position: fixed;
   bottom: 0;
+  color: pink;
   animation: subir 5s linear infinite;
 }
 
@@ -120,6 +109,7 @@ section {
 
 <body>
 
+<!-- LOGIN -->
 <div id="login" style="
   position:fixed;
   width:100%;
@@ -135,13 +125,14 @@ section {
     background: rgba(255,255,255,0.1);
     padding:30px;
     border-radius:20px;
+    text-align:center;
     backdrop-filter: blur(10px);
   ">
 
-    <h2>duvido se ce sabe a senha</h2>
+    <h2>Digite a senha</h2>
 
     <input id="senha" type="password" placeholder="Senha"
-      style="padding:10px; border:none; border-radius:10px; margin-top:10px; width:100%;">
+      style="padding:10px; border:none; border-radius:10px; margin-top:10px;">
 
     <br><br>
 
@@ -161,46 +152,48 @@ section {
   </div>
 </div>
 
+<!-- MENU -->
 <nav>
-  <a href="#home">so o basico</a>
-  <a href="#memorias">Memorias</a>
+  <a href="#home">CASA</a>
+  <a href="#memorias">Memorias💞</a>
   <a href="#mensage">leia prfv</a>
 </nav>
 
+<!-- HOME -->
 <section id="home">
-  <h1>seja bem vinda💞</h1>
-  <p>olha o insistente aqui de novo kskssk</p>
+  <h1>seja bem vinda❤️</h1>
+  <p>aqui contem minhas sinceras desculpas e algumas memorias nossa 💕</p>
 
   <div class="media-grid">
     
-        <video controls  autoplay muted loop playsinline>
+    <video controls> controls  autoplay muted loop playsinline>
       <source src="https://files.catbox.moe/i8ebf7.mp4" type="video/mp4">
     </video>
 
-    <video controls  autoplay muted loop playsinline>
+    <video controls> controls  autoplay muted loop playsinline>
       <source src="https://files.catbox.moe/ie1o30.mp4" type="video/mp4">
     </video>
 
-    <video controls  autoplay muted loop playsinline>
+    <video controls> controls  autoplay muted loop playsinline>
       <source src="https://videos.viddynest.com/uploads/kLuoVk72tB/e1e61c97-1e10-4953-8d10-80f6fc24ce8d.mp4">
     </video>
 
-    <video controls  autoplay muted loop playsinline>
+    <video controls> controls  autoplay muted loop playsinline>
       <source src="https://videos.viddynest.com/uploads/36hOmiMUpG/60b976f6-881f-46f3-820b-a479cae10f6c.mp4">
     </video>
 
-    <video controls  autoplay muted loop playsinline>
+    <video controls> controls  autoplay muted loop playsinline>
       <source src="https://videos.viddynest.com/uploads/abQS0vAPrt/bcad0e36-2ec2-4a98-9b36-b405b3d0781b.mp4">
     </video>
 
-    <video controls autoplay muted loop playsinline>
-  <source src="https://videos.viddynest.com/uploads/EfSNzwiqVf/IMG_5426.mp4" type="video/mp4">
-</video>
-
+    <video controls> controls  autoplay muted loop playsinline>
+      <source src="https://videos.viddynest.com/uploads/2-KBBdBIb9/49DBC897-ABBF-47DA-8795-FECDE9558317.mp4">
+    </video>
 
   </div>
 </section>
 
+<!-- MEMORIES -->
 <section id="memorias">
   <h1>Memorias</h1>
 
@@ -211,13 +204,14 @@ section {
   </div>
 </section>
 
+<!-- MESSAGE -->
 <section id="mensage">
-  <h1>so leia</h1>
+  <h1>desculpa por tudo.</h1>
 
   <div class="card">
     <p>
-      so pra ser ignorado de novo. mas eu ja espero isso<br><br>
-            Eu criei esse site como uma forma de deixar registrado tudo aquilo que talvez eu nunca tenha conseguido te dizer direito.
+      te prometi nao te procurar mais..<br><br>
+      Eu criei esse site como uma forma de deixar registrado tudo aquilo que talvez eu nunca tenha conseguido te dizer direito.
 
 Eu sei que errei muito com você. Fui imaturo, não fui sincero quando deveria ter sido, e depois do término eu ainda tentei te esquecer me envolvendo com outra pessoa… e isso só piorou tudo. Hoje eu enxergo com clareza o quanto minhas atitudes te machucaram, e carrego essa culpa comigo todos os dias.
 
@@ -230,6 +224,8 @@ Mas, apesar de tudo, você foi uma das coisas mais bonitas que já aconteceram n
 Eu sinto muito por ter sido o motivo de você decidir nunca mais me querer na sua vida. Essa é uma dor que eu vou carregar, mas também é o que me faz querer ser alguém melhor.
 
 Se algum dia você lembrar de mim, eu só espero que não seja apenas pelos erros… mas também por tudo que foi verdadeiro entre a gente.
+
+Te vivo… e vivo te esperando.
     </p>
   </div>
 </section>
@@ -239,7 +235,7 @@ Se algum dia você lembrar de mim, eu só espero que não seja apenas pelos erro
 <script>
 const audio = new Audio("music.mp3");
 
-const inicio = 1;
+const inicio = 60;
 const fim = 90;
 
 const btn = document.getElementById("btn");
@@ -272,8 +268,8 @@ setInterval(() => {
 
   document.body.appendChild(heart);
 
-  setTimeout(() => heart.remove(), 5000);
-}, 800);
+  setTimeout(() => heart.remove(), 10000);
+}, 1000);
 
 function entrar() {
   const senha = document.getElementById("senha").value;
@@ -281,7 +277,7 @@ function entrar() {
   if (senha === "2107") {
     document.getElementById("login").style.display = "none";
   } else {
-    document.getElementById("erro").innerText = "errou pcr kkk";
+    document.getElementById("erro").innerText = "errou pcr ksks";
   }
 }
 </script>
