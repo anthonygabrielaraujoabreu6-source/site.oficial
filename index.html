@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <title>so vai saber se Entrar kskssk</title>
 
@@ -49,7 +49,6 @@ section {
   padding: 90px 10px 40px;
 }
 
-/* GRID */
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,7 +56,6 @@ section {
   padding: 10px;
 }
 
-/* CORREÇÃO PRINCIPAL DOS VÍDEOS */
 .media-grid video {
   width: 100%;
   aspect-ratio: 16/9;
@@ -134,16 +132,19 @@ section {
   align-items:center;
   z-index:9999;
 ">
+
   <div style="
     background: rgba(255,255,255,0.1);
     padding:30px;
     border-radius:20px;
     backdrop-filter: blur(10px);
   ">
+
     <h2>duvido se ce sabe a senha</h2>
 
     <input id="senha" type="password" placeholder="Senha"
-      style="padding:10px; border:none; border-radius:10px; margin-top:10px; width:100%;">
+      autocomplete="off"
+      style="padding:12px; font-size:16px; border:none; border-radius:10px; margin-top:10px; width:100%;">
 
     <br><br>
 
@@ -159,6 +160,7 @@ section {
     </button>
 
     <p id="erro" style="color:red; margin-top:10px;"></p>
+
   </div>
 </div>
 
@@ -183,15 +185,15 @@ section {
     </video>
 
     <video controls preload="metadata" playsinline>
-      <source src="https://videos.viddynest.com/uploads/kLuoVk72tB/e1e61c97-1e10-4953-8d10-80f6fc24ce8d.mp4">
+      <source src="https://videos.viddynest.com/uploads/kLuoVk72tB/e1e61c97-1e10-4953-8d10-80f6fc24ce8d.mp4" type="video/mp4">
     </video>
 
     <video controls preload="metadata" playsinline>
-      <source src="https://videos.viddynest.com/uploads/36hOmiMUpG/60b976f6-881f-46f3-820b-a479cae10f6c.mp4">
+      <source src="https://videos.viddynest.com/uploads/36hOmiMUpG/60b976f6-881f-46f3-820b-a479cae10f6c.mp4" type="video/mp4">
     </video>
 
     <video controls preload="metadata" playsinline>
-      <source src="https://videos.viddynest.com/uploads/abQS0vAPrt/bcad0e36-2ec2-4a98-9b36-b405b3d0781b.mp4">
+      <source src="https://videos.viddynest.com/uploads/abQS0vAPrt/bcad0e36-2ec2-4a98-9b36-b405b3d0781b.mp4" type="video/mp4">
     </video>
 
     <video controls preload="metadata" playsinline>
